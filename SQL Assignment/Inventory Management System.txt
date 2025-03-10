@@ -1,0 +1,36 @@
+-- Create Items table
+CREATE TABLE Items (
+    sku VARCHAR(50) PRIMARY KEY,             -- Nominal: Unique product code
+    description VARCHAR(255),                -- Nominal: Product description
+    quality_rating TINYINT CHECK (quality_rating BETWEEN 1 AND 5), -- Ordinal: 1 (lowest) to 5 (highest) rating
+    manufacture_date DATE,                   -- Interval: Dates can be subtracted to find durations
+    stock_level INT,                         -- Ratio: Stock levels (true zero applies)
+    unit_price DECIMAL(10,2)                 -- Ratio: Price per unit (price 0 means free)
+);
+
+-- Create Suppliers table
+CREATE TABLE Suppliers (
+    supplier_id INT PRIMARY KEY AUTO_INCREMENT,
+    supplier_name VARCHAR(255),              -- Nominal: Supplier name
+    contact_info VARCHAR(255),
+    supplier_priority VARCHAR(255)  -- Ordinal: Ranking supplier priority
+);
+
+-- Create Warehouses table
+CREATE TABLE Warehouses (
+    warehouse_id INT PRIMARY KEY AUTO_INCREMENT,
+    location VARCHAR(255),                   -- Nominal: Warehouse location name/address
+    capacity INT                             -- Ratio: Maximum capacity (e.g., square feet or units)
+);
+
+-- Create Orders table
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    order_date DATE,                         -- Interval: Order date (interval differences are meaningful)
+    order_type VARCHAR(255),            -- Nominal: Type of order ('in' for incoming stock, 'out' for outgoing shipment)
+    sku VARCHAR(50),
+    quantity INT,                            -- Ratio: Quantity ordered (zero is a meaningful value)
+    warehouse_id INT,
+    FOREIGN KEY (sku) REFERENCES Items(sku),
+    FOREIGN KEY (warehouse_id) REFERENCES Warehouses(warehouse_id)
+);
