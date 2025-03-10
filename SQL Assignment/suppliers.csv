@@ -1,0 +1,21 @@
+supplier_id,supplier_name,contact_info,supplier_priority
+1,Casey Ltd,rachelstewart@example.net,Medium
+2,Martin LLC,jim72@example.com,Low
+3,Ramos Ltd,villegasshawn@example.org,High
+4,Cisneros-Lamb,shelbyrose@example.com,Medium
+5,"Thompson, Allen and Miller",mosspaul@example.com,Low
+6,"Wright, Spencer and Steele",wilsonbryan@example.net,Medium
+7,"Rodriguez, Shannon and Sandoval",ghall@example.net,High
+8,Alexander LLC,llloyd@example.com,Low
+9,Gonzalez-Davis,victoria64@example.org,High
+10,"Scott, Chambers and Garcia",salinasjoseph@example.net,High
+11,"Miller, Young and Hawkins",benjaminwilson@example.com,Medium
+12,Carrillo Inc,drussell@example.org,High
+13,Parks Inc,jonesmichael@example.org,Medium
+14,"Williams, Johnston and Hughes",bowmanrobert@example.com,High
+15,Love LLC,laurajarvis@example.org,Low
+16,Long-Hawkins,mark23@example.com,High
+17,Cohen Ltd,glewis@example.org,High
+18,"Sandoval, Rice and Wallace",acrawford@example.com,Medium
+19,Vargas-Simmons,ydelgado@example.org,Medium
+20,"Harper, Gibson and Clayton",hayesdavid@example.org,Low
